@@ -1,0 +1,18 @@
+<div class="container">
+  
+  <div class="teste">
+        <h1>Restaurants</h1>
+        <ul>
+            <%= link_to 'Create a new Restaurant', new_restaurant_path, class: "btn btn-secondary" %>
+            <% @restaurants.each do |restaurant| %>
+            <li> 
+                <%= restaurant.name %> | <%= restaurant.address %> | <%= restaurant.category %>
+                <%= link_to "See details", restaurant_path(restaurant), class: "btn btn-primary"%>
+            </li>
+            <br>
+            <% end %>
+        </ul>
+    </div>
+</div>
+
+
